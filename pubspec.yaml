@@ -1,0 +1,47 @@
+name: doctor_appointment
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_bloc: ^9.1.1
+  # Code generator (mainly used with cubit && retrofit)
+  freezed: ^3.2.0
+  # Annotations for the freezed code-generator.
+  freezed_annotation: ^3.1.0
+  # for dependency Injection  
+  get_it: ^8.1.0
+  # HTTP networking.
+  dio: ^5.8.0+1
+  retrofit: ^4.7.0
+  pretty_dio_logger: ^1.4.0
+  json_annotation: ^4.9.0
+
+  # localization
+  intl: ^0.20.2
+  easy_localization: ^3.0.8
+  # splash screen 
+  flutter_native_splash: ^2.4.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+  # Automatically generate code for converting to and from JSON by annotating Dart classes.
+  json_serializable: ^6.10.0
+  # retro generator
+  retrofit_generator: ^10.0.1
+
+  build_runner: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
