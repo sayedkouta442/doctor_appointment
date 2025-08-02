@@ -23,12 +23,20 @@ dependencies:
   retrofit: ^4.7.0
   pretty_dio_logger: ^1.4.0
   json_annotation: ^4.9.0
-
   # localization
   intl: ^0.20.2
   easy_localization: ^3.0.8
   # splash screen 
   flutter_native_splash: ^2.4.6
+  # 
+  flutter_svg: ^2.2.0
+  # 
+  flutter_screenutil: ^5.9.3
+  # 
+ 
+
+
+
 
 dev_dependencies:
   flutter_test:
@@ -45,3 +53,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets: 
+    - assets/images/
+    - assets/svgs/
