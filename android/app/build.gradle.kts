@@ -7,7 +7,8 @@ plugins {
 
 android {
     namespace = "com.example.doctor_appointment"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
+//        flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -26,6 +27,7 @@ android {
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
+        ndkVersion = "27.0.12077973"
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
