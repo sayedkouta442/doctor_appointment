@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                 Column(
                   children: [
                     const EmailAndPassword(),
-                    //   verticalSpacing(24),
+                    verticalSpacing(12),
                     Align(
                       alignment: AlignmentDirectional.centerEnd,
                       child: Text(

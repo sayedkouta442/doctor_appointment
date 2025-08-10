@@ -17,7 +17,7 @@ class LoginResponse {
 @JsonSerializable()
 class UserData {
   final String? token;
-  @JsonKey(name: 'userName')
+  @JsonKey(name: 'username')
   final String? userName;
 
   UserData(this.token, this.userName);
