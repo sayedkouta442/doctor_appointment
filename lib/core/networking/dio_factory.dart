@@ -32,3 +32,60 @@ class DioFactory {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+/*
+
+class DioFactory {
+  DioFactory._(); // Private constructor
+
+  static Dio? _dio;
+
+  static Dio get instance {
+    if (_dio == null) {
+      _dio = _createDio();
+    }
+    return _dio!;
+  }
+
+  static Dio _createDio() {
+    final dio = Dio(
+      BaseOptions(
+        baseUrl: 'https://api.example.com',
+        connectTimeout: const Duration(seconds: 30),
+        receiveTimeout: const Duration(seconds: 30),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      ),
+    );
+
+    dio.interceptors.add(
+      PrettyDioLogger(
+        requestBody: true,
+        requestHeader: true,
+        responseHeader: true,
+      ),
+    );
+
+    return dio;
+  }
+
+  static void reset({String? baseUrl}) {
+    _dio = _createDio();
+    if (baseUrl != null) {
+      _dio!.options.baseUrl = baseUrl;
+    }
+  }
+}
+
+
+
+*/
