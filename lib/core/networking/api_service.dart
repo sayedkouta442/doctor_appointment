@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:doctor_appointment/core/networking/api_constants.dart';
 import 'package:doctor_appointment/features/login/data/models/login_request_body.dart';
 import 'package:doctor_appointment/features/login/data/models/login_response.dart';
+import 'package:doctor_appointment/features/signup/data/models/sign_up_request_body.dart';
+import 'package:doctor_appointment/features/signup/data/models/sign_up_response_body.dart';
 import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
 
@@ -13,4 +15,7 @@ abstract class ApiService {
 
   @POST(ApiConstants.login)
   Future<LoginResponse> login(@Body() LoginRequestBody loginRequestBody);
+
+  @POST(ApiConstants.signup)
+  Future<SignupResponse> signup(@Body() SignupRequestBody signupRequestBody);
 }
