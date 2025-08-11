@@ -1,24 +1,20 @@
-import 'package:doctor_appointment/core/helpers/extensions.dart';
 import 'package:doctor_appointment/core/helpers/spacing.dart';
-
 import 'package:doctor_appointment/core/theming/styles.dart';
 import 'package:doctor_appointment/core/widgets/app_text_button.dart';
 
-import 'package:doctor_appointment/features/login/data/models/login_request_body.dart';
-import 'package:doctor_appointment/features/login/logic/cubit/login_cubit.dart';
-
-import 'package:doctor_appointment/features/login/ui/widgets/dont_have_account_text.dart';
-import 'package:doctor_appointment/features/login/ui/widgets/email_and_password.dart';
-import 'package:doctor_appointment/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:doctor_appointment/features/login/ui/widgets/terms_and_conditions_text.dart';
+import 'package:doctor_appointment/features/signup/logic/cubit/signup_cubit.dart';
+import 'package:doctor_appointment/features/signup/ui/widgets/already_have_account_text.dart';
+import 'package:doctor_appointment/features/signup/ui/widgets/signup_bloc_listener.dart';
+import 'package:doctor_appointment/features/signup/ui/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
 
-  final GlobalKey formkey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
   //bool isObscureText = true;
   @override
@@ -40,29 +36,29 @@ class LoginScreen extends StatelessWidget {
                 verticalSpacing(36),
                 Column(
                   children: [
-                    const EmailAndPassword(),
-                    verticalSpacing(12),
-                    Align(
-                      alignment: AlignmentDirectional.centerEnd,
-                      child: Text(
-                        'Forgot Password',
-                        style: TextStyles.font13BlueRegular,
-                      ),
-                    ),
+                    const SignupForm(),
+                    // verticalSpacing(12),
+                    // Align(
+                    //   alignment: AlignmentDirectional.centerEnd,
+                    //   child: Text(
+                    //     'Forgot Password',
+                    //     style: TextStyles.font13BlueRegular,
+                    //   ),
+                    // ),
                     verticalSpacing(40),
                     AppTextButton(
-                      buttonText: 'Login',
+                      buttonText: 'Sign up',
                       textStyle: TextStyles.font16WhiteSemiBold,
                       onPressed: () {
-                        validateThenLogin(context);
+                        validateThenSignup(context);
                       },
                     ),
                     verticalSpacing(16),
                     //
                     TermsAndConditionsText(),
                     verticalSpacing(32),
-                    DontHaveAccountText(),
-                    const LoginBlocListener(),
+                    AlreadyHaveAccountText(),
+                    SignupBlocListener(),
                     //
                   ],
                 ),
@@ -74,9 +70,9 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  void validateThenLogin(BuildContext context) {
-    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginStates();
+  void validateThenSignup(BuildContext context) {
+    if (context.read<SignupCubit>().formkey.currentState!.validate()) {
+      context.read<SignupCubit>().emitSignupStates();
     }
   }
 }
