@@ -1,0 +1,150 @@
+[33mcommit 1efa0eb51e30f385209ce1185d968e4e634ce08d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeatures/fastlane-firebase-app-distribution[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Thu Aug 14 15:03:35 2025 +0300
+
+    - added fastlane to android and connect it to firebaseapp distribution
+    - pumbed version to 0.1.1
+
+[33mcommit 237392dfee93a73951367135ebcc92c2cdf69278[m[33m ([m[1;31morigin/features/flavors[m[33m, [m[1;32mfeatures/flavors[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Tue Aug 12 01:32:42 2025 +0300
+
+    - added Development & Production flavors for Android
+    - changed Android app name for each flavor
+    - added launch json for flavors config.
+    - added two main files for each flavor(dev, prod)
+
+[33mcommit 912bef0abfdfd717d4c57c91de387e1e3e953f4d[m[33m ([m[1;32mdevelopment[m[33m)[m
+Merge: 85710b3 1b85400
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Mon Aug 11 22:03:06 2025 +0300
+
+    Merge pull request #7 from sayedkouta442/features/signup
+    
+    complete signup
+
+[33mcommit 1b8540087c17d00926664ddae1aff61d1d96d628[m[33m ([m[1;31morigin/features/signup[m[33m, [m[1;32mfeatures/signup[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Mon Aug 11 22:02:40 2025 +0300
+
+    complete signup
+
+[33mcommit 85710b31c3fe039ec12f3f751900d58c0ae55b0a[m
+Merge: a563b7a 8a3661b
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Mon Aug 11 01:41:06 2025 +0300
+
+    Merge pull request #6 from sayedkouta442/features/login-api
+    
+    some edits
+
+[33mcommit 8a3661bb1a488902adc5503f189a7188b95304b9[m[33m ([m[1;31morigin/features/login-api[m[33m, [m[1;32mfeatures/login-api[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Mon Aug 11 01:41:36 2025 +0300
+
+    some edits
+
+[33mcommit a563b7ad2d482b646bdf336f8f45e03b5e4396e9[m
+Merge: 2e2cd1f c90dd04
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Sun Aug 10 21:47:59 2025 +0300
+
+    Merge pull request #5 from sayedkouta442/features/login-api
+    
+    complete login
+
+[33mcommit c90dd0434f07a08cd06021e9ae5c5e60f9644e5f[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Sun Aug 10 21:41:38 2025 +0300
+
+    - added DI
+    - added AppRegex
+    - integrated with login EP
+    - added login repo && cubit
+    - added login states with validation
+
+[33mcommit 2e2cd1f44ad9d59ee103ea69b7954b5306c59aa4[m[33m ([m[1;32mfeatures/login[m[33m)[m
+Merge: 834b875 a432b91
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Fri Aug 8 23:11:42 2025 +0300
+
+    Merge pull request #4 from sayedkouta442/features/login
+    
+    finsh login design
+
+[33mcommit a432b919d308b3086d4f2cdca5483df5abf4df18[m[33m ([m[1;31morigin/features/login[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Fri Aug 8 23:06:43 2025 +0300
+
+    - added spacing file for sizedbox
+    - added some colors and text styles
+    - added fontWeight helper
+    - added general TextButton &&  TextField
+    - finsh login design
+
+[33mcommit 834b875c55db9247516e412a0a26960a8fc58d31[m
+Merge: 91d5c54 8f23471
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Wed Aug 6 22:18:52 2025 +0300
+
+    Merge pull request #3 from sayedkouta442/features/splash-android12
+    
+    - add android 12+ splash screen(figma)
+
+[33mcommit 8f23471535a4101251cd764e8f69ed5a555a25db[m[33m ([m[1;31morigin/features/splash-android12[m[33m, [m[1;32mfeatures/splash-android12[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Wed Aug 6 22:12:52 2025 +0300
+
+    - add android 12+ splash screen(figma)
+
+[33mcommit 91d5c54bd828bebd4f9ef669005f61a1a6b3acee[m[33m ([m[1;32mfeatures/splash-screen[m[33m)[m
+Merge: 207a5e3 6f15676
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Tue Aug 5 23:18:47 2025 +0300
+
+    Merge pull request #2 from sayedkouta442/features/splash-screen
+    
+    - added splash screen ios && android 12(plus)
+
+[33mcommit 6f156760b63eaba4f4349dc0b339ac6d8b865784[m[33m ([m[1;31morigin/features/splash-screen[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Tue Aug 5 23:06:50 2025 +0300
+
+    - added splash screen ios && android 12 and below
+    - added splash screen forandroid 12+
+
+[33mcommit 207a5e3c00cca6b29225ffee746fd02fdb943a2f[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Sat Aug 2 20:15:35 2025 +0300
+
+    test
+
+[33mcommit 243b4fbd81021943bafc3c31edb7ecca78e33c40[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Sat Aug 2 19:27:18 2025 +0300
+
+    just fake push to origin development
+
+[33mcommit 292f6e814b94fb60bf92ca232bf80aa8b82c29e0[m[33m ([m[1;31morigin/features/onboarding[m[33m, [m[1;32mfeatures/onboarding[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Sat Aug 2 19:17:12 2025 +0300
+
+    - added images folder for assets
+    - added flutter_svg and flutter_screenutil
+    - made a file for doc app client
+    - added navigation extension
+    - added routing folder that has router class and routes file
+    - added colors and text styles
+    - added onboarding screen
+
+[33mcommit 573ed204e18ed6b5f93d41292dc115d12ad45557[m[33m ([m[1;32mmaster[m[33m)[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Fri Aug 1 18:08:10 2025 +0300
+
+    jsut test
+
+[33mcommit 544b30b17366945789addfc8d5a01900061e5d1a[m
+Author: sayedkouta442 <152211493+sayedkouta442@users.noreply.github.com>
+Date:   Fri Aug 1 15:15:11 2025 +0300
+
+    Initial commit
