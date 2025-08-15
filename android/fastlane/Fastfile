@@ -7,13 +7,13 @@ platform :android do
     sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
 
     firebase_app_distribution(
-<<<<<<< HEAD
+
       app: "1:588101635205:android:12d251fea4dec88b41adec",
       firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
-=======
+ 
       app: AppKeys.firebaseAppId,
       firebase_cli_token: AppKeys.firebaseCliToken,
->>>>>>> 426ed79ac76aac00185d61bbc74ef383a013bcf6
+ 
       apk_path: "../build/app/outputs/apk/production/release/app-production-release.apk",
       upload_timeout: 800,  # set to desired seconds
       testers: "koutaelsayed@gmail.com",
@@ -23,8 +23,5 @@ platform :android do
   end
 end
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 426ed79ac76aac00185d61bbc74ef383a013bcf6
+ 
+ 
