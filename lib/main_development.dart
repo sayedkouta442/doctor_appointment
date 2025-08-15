@@ -10,3 +10,6 @@ void main() async {
   setupGetIt();
   runApp(DocApp(appRouter: AppRouter()));
 }
+
+
+// flutter build apk --flavor production -t lib/main_production.dart      
