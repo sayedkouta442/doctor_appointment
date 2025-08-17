@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/features/home/ui/widgets/home_top_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -7,8 +8,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home Screen'), centerTitle: true),
-      body: Center(child: Text('HOME SCREEN ????????????????????')),
+      backgroundColor: Colors.white,
+
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.fromLTRB(16, 20, 16, 16),
+          //  color: Colors.yellow,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [const HomeTopBar()],
+          ),
+        ),
+      ),
     );
   }
 }
