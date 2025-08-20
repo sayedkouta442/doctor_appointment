@@ -1,4 +1,5 @@
 import 'package:doctor_appointment/core/networking/api_result.dart';
+import 'package:doctor_appointment/features/home/data/models/specialization_response_model.dart';
 import 'package:doctor_appointment/features/home/data/repos/home_repo.dart';
 import 'package:doctor_appointment/features/home/logic/cubit/home_state.dart';
 
@@ -9,6 +10,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   final HomeRepo _homeRepo;
 
+  List<SpecializationData?>? specializationDataList = [];
   void getSpecializations() async {
     emit(HomeState.specializationsLoading());
 
@@ -16,7 +18,13 @@ class HomeCubit extends Cubit<HomeState> {
 
     response.when(
       success: (specializationResponseModel) {
-        emit(HomeState.specializationsSuccess(specializationResponseModel));
+        specializationDataList =
+            specializationResponseModel.specializationDataList ?? [];
+        emit(
+          HomeState.specializationsSuccess(
+            specializationResponseModel.specializationDataList,
+          ),
+        );
       },
       failure: (errorHandler) {
         emit(HomeState.specializationsError(errorHandler));
