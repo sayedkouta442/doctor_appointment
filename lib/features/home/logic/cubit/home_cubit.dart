@@ -1,3 +1,5 @@
+import 'package:doctor_appointment/core/helpers/extensions.dart';
+import 'package:doctor_appointment/core/networking/api_error_handler.dart';
 import 'package:doctor_appointment/core/networking/api_result.dart';
 import 'package:doctor_appointment/features/home/data/models/specialization_response_model.dart';
 import 'package:doctor_appointment/features/home/data/repos/home_repo.dart';
@@ -20,6 +22,10 @@ class HomeCubit extends Cubit<HomeState> {
       success: (specializationResponseModel) {
         specializationDataList =
             specializationResponseModel.specializationDataList ?? [];
+
+        getDoctorsList(
+          specializayionId: specializationDataList?.first?.id ?? 1,
+        ); //.first?.id
         emit(
           HomeState.specializationsSuccess(
             specializationResponseModel.specializationDataList,
@@ -30,5 +36,25 @@ class HomeCubit extends Cubit<HomeState> {
         emit(HomeState.specializationsError(errorHandler));
       },
     );
+  }
+
+  void getDoctorsList({required int specializayionId}) async {
+    List<Doctors?>? doctorsList = getDoctorsListBySpecializationId(
+      specializayionId,
+    );
+    !doctorsList.isNullOrEmpty()
+        ? emit(DoctorsSuccess(doctorsList))
+        : emit(
+            DoctorsError(
+              ErrorHandler.handle('No Doctors Found for this Specialization'),
+            ),
+          );
+  }
+
+  // return list of doctors by specialization id
+  getDoctorsListBySpecializationId(int specializaionID) {
+    return specializationDataList
+        ?.firstWhere((specializaion) => specializaion?.id == specializaionID)
+        ?.doctorsList;
   }
 }

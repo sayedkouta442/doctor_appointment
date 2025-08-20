@@ -3,7 +3,7 @@ import 'package:doctor_appointment/core/networking/api_service.dart';
 import 'package:doctor_appointment/core/networking/dio_factory.dart';
 import 'package:doctor_appointment/features/home/data/apis/home_api_service.dart';
 import 'package:doctor_appointment/features/home/data/repos/home_repo.dart';
-import 'package:doctor_appointment/features/home/logic/cubit/home_cubit.dart';
+
 import 'package:doctor_appointment/features/login/data/repos/login_repo.dart';
 import 'package:doctor_appointment/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_appointment/features/signup/data/repos/signup_repo.dart';
